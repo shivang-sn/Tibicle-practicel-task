@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0px;padding: 0px;
+}
+body{
+    padding:0px;margin:0px;font-family: 'Roboto', sans-serif;
+}
+.d-flex{
+    display: flex;
+}
+.space-between{
+    justify-content: space-between;
+}
+.container {
+    margin: 0px 20px;
+}
+.col-3{
+    width: 33.33%;
+    max-width: 33.33%;
+}
+.mr-15{
+    margin-right: 15px;
+}
+
+//vaiables
+$bg-color-default:#cc49a6;
+$text-color-default: #fff;
+$disabled-color: #d1d1d1;
+
+//mixin
+@mixin default-text-style{
+     color: $text-color-default;
+     font-weight: 400;
+     font-size: 20px;   
+}
+
+.dycalendar-month-prev-next-button{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    right: 10px;
+    transform: none;
+    z-index: 9999;
+    background: $text-color-default;
+    border: 1px solid #c1c1c2;
+    border-radius: 5px;
+}

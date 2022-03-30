@@ -1,0 +1,272 @@
+ @import 'dycalendar.css'; @import 'common.scss';
+
+.bg-color{
+    width: 100%;height:100%;background-color: $bg-color-default;padding-bottom: 20px;
+}  
+.default-style-text{
+    @include default-text-style; 
+}
+span.time-icons{
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    float: left;
+}
+.right-icons {
+    width: auto;
+    height: 20px;
+    float: right;
+}  
+.right-icons{ 
+    img {
+    width: 20px;
+    }
+}
+.page-title {
+    padding: 15px 0px;
+    color: #fff;
+    width: 100%;
+    font-size: 24px;
+    letter-spacing: 2px;
+    img {
+        width: 20px;
+    }
+}
+.banner{
+    width: 100%;position: relative;
+    img{
+        width: 100%;
+    }
+}
+.prl-20{
+    margin: 0px 20px;
+}
+.member-info-outer {
+    padding: 20px 0px;
+    margin-top: -50px;
+    background-color: #fff;
+    display: block;
+    width: 100%;
+}
+.profile-img-name {
+    background-color: $bg-color-default;
+    z-index: 999;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    padding: 25px 20px;
+    top: 70%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+h2.profile-title {
+    display: flex;
+    align-items: center;
+    color: $text-color-default;
+    img.profile-pic {
+        width: 30%;
+        height: auto;
+        border: 5px solid $text-color-default;
+        border-radius: 50%;
+        background: $text-color-default;
+        margin-right: 20px;
+    }
+}
+.calendar {
+    padding: 25% 0px 0px 0px;
+}
+.prl-10{
+    padding: 0px 10px;
+}
+.weekdays.slick-initialized.slick-slider {
+    margin-top: 20px;
+}
+.d-flex.font{
+    font-size: 20px;color: #000;font-weight: 600;justify-content: space-between;
+}
+.day.d-flex { position: relative;margin:0px 5px;border: 1px solid #cecded;border-radius:5px;
+    input {
+    width: 100%;
+    appearance: none;
+    position: relative;
+    height: 50px;
+    }
+    label{
+        top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 15px;
+        span{
+            font-weight: 700;
+        }
+    }
+}
+.day.d-flex.slick-slide.slick-current.slick-active {
+    background: $bg-color-default;
+    border-color: transparent;
+    label{
+        color: $text-color-default;
+    }
+}
+.day.d-flex.slick-slide.disabled.slick-active {
+    background: $disabled-color;
+}
+.time-of-day {
+    padding: 20px 0px;
+    p{
+        font-size: 20px;color: #000;font-weight: 600;justify-content: space-between;
+    }
+    .time-slots.d-flex{
+        flex-wrap: wrap;justify-content:space-between;
+        .time-sloat{
+            border: 1px solid #cecded;
+            width: 22%;
+            max-width: 22%;
+            padding: 5px;
+            margin: 10px 5px;
+            position: relative;
+            height: 25px;
+            border-radius: 5px;
+            color: #000;
+            input, label {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            label{
+                display: flex;align-items: center;font-size: 12px;justify-content: center;height: 25px;
+            }
+            &:hover{
+                background-color: $bg-color-default;
+            color: $text-color-default;
+            border-color: transparent;
+            }
+        }
+        .time-sloat.active{
+            background-color: $bg-color-default;
+            color: $text-color-default;  
+            border-color: transparent;
+        }
+        .time-sloat.disabled{
+            background-color: $disabled-color;
+            border-color: transparent;
+            &hover{
+                color: #000;
+            }
+        }  
+    }
+}
+.dycalendar-month-prev-next-button.show-calander{
+    display: block;
+}
+.month-name{img.icon.mr-15 {
+    width: 15px;
+    height: 10px;
+    margin: 0px 0px 0px 0px;
+    transform: rotate(270deg);
+    transition: 0.3s ease;
+}
+img.icon.mr-15.show {
+    transform: rotate(90deg);
+    transition: 0.3s ease;
+}
+}
+.dycalendar-body {
+    table {
+    width: 100%;
+        tr{
+            td{
+                font-weight: 600;
+                &:hover{
+                    background-color: $bg-color-default;
+                    color: $text-color-default;
+                }
+            }
+        }    
+    }
+}
+.tabs-outer {
+    margin-bottom: 30px;
+}
+.accordion-collapse{
+    display: none;
+    &.show{
+        display: block;
+    }
+}
+.accordion-collapse.show {
+    display: block;
+    padding: 10px;
+    border: 1px solid #cecded;
+    border-top: none;
+    box-shadow: 5px 5px 10px #cecded;z-index: 999;
+}
+.accordion-header{
+    justify-content: space-between;align-items:center;padding: 10px 15px;
+    box-shadow: 5px 5px 10px #cecded;border:1px solid #cecded;
+    img{
+        width: 20px;height: 20px;transform: rotate(180deg); transition: 0.3s ease;
+    }
+    img.icon.show{
+        transform: rotate(270deg); transition: 0.3s ease;  
+    }
+}
+.next-btn{
+    .btn-primary{
+        padding: 10px 20px;
+        background-color: $bg-color-default;
+        color: $text-color-default;
+        font-weight: 600;
+        font-size: 25px;
+        text-align: center;
+        width: 100%;
+        border: 1px solid transparent;
+        text-decoration: none;
+        border-radius: 10px;
+        display: block;
+        letter-spacing: 2px;
+        transition: 0.3s ease;
+        &:hover{
+            color: $bg-color-default;
+            background-color: $text-color-default;
+            border-color: $bg-color-default;
+            transition: 0.3s ease;
+        }
+    }
+}
+
+@media only screen and (min-width: 767px){
+    .calendar {
+        padding: 20% 0px 0px 0px;
+    }
+    .container {
+        margin: 0px 40px;
+    }
+    .day.d-flex 
+    {
+        label{
+            flex-direction: row;
+            .number{
+                margin-right: 10px;
+            }
+        }
+    }
+    .time-of-day {
+        .time-slots.d-flex {
+            .time-sloat{
+                height: 40px;
+            }
+        }
+    }
+}
